@@ -28,14 +28,17 @@ class User implements nameable, emailable {
     private $lastName;
 	private $userName;
 	private $email;
+	private $password;
     
 		
-	// __construct with 2 params called: firstName,lastName
-    public function __construct($firstName, $lastName) {
+	// __construct with 5 params called: firstName,lastName, userName, email, password
+    public function __construct($firstName, $lastName, $userName, $email ,$password) {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
-    }
-	
+        $this->userName = $userName;
+        $this->email = $email;
+        $this->password = $password;
+    }	
 	
     public function getUserName() {
         return $this->userName;
@@ -44,5 +47,12 @@ class User implements nameable, emailable {
     public function getEmail() {
         return $this->email;
     }
+	
+	public function getPassword() {
+        return $this->password;
+    }
+	
 }
+
+
 ?>
